@@ -2,16 +2,18 @@
 #include "led.h"
 #include "buzzer.h"
 #include "show.h"
+#include "button.h"
+#include "uart.h"
 
 #define START_TASK_PRIO			4
-#define START_STK_SIZE 			512
+#define START_STK_SIZE 			256
 TaskHandle_t StartTask_Handler;
 void start_task(void *pvParameters);
 
 int main(void)
 {
 	systemInit();
-	  
+	
     xTaskCreate((TaskFunction_t ) start_task,
                 (const char*    ) "start_task",
                 (uint16_t       ) START_STK_SIZE,
@@ -25,11 +27,9 @@ int main(void)
 void start_task(void *pvParameters)
 {
     taskENTER_CRITICAL();
-    
-    //xTaskCreate(led_task, "led_task", LED_STK_SIZE, NULL, LED_TASK_PRIO, NULL);
-		//xTaskCreate(buzzer_task, "buzzer_task", BUZZER_STK_SIZE, NULL, BUZZER_TASK_PRIO, NULL);
-    //xTaskCreate(show_task, "show_task", SHOW_STK_SIZE, NULL, SHOW_TASK_PRIO, NULL);
-		//xTaskCreate(show_timer_task, "show_timer_task", SHOW_STK_SIZE, NULL, SHOW_TASK_PRIO, NULL);
+
+		xTaskCreate(song_task, "song_task", BUZZER_STK_SIZE, NULL, 3, NULL);
+	
     vTaskDelete(StartTask_Handler);
     
     taskEXIT_CRITICAL();

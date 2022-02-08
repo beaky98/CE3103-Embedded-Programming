@@ -12,7 +12,10 @@ void systemInit(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 	delay_init();					          
 	LED_Init();                     
-  //BUZZER_Init();             	
+  BUZZER_Init();             	
 	OLED_Init(); 
+	Button_Init();
+	uart_init(115200);
+	
 
 }

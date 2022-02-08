@@ -44,11 +44,14 @@
 .\objects\main.o: .\FreeRTOS\include\timers.h
 .\objects\main.o: .\FreeRTOS\include\semphr.h
 .\objects\main.o: .\SYSTEM\delay\delay.h
-.\objects\main.o: .\HARDWARE\Buzzer\buzzer.h
+.\objects\main.o: .\HARDWARE\BUTTON\button.h
 .\objects\main.o: .\SYSTEM\SYSTEM\system.h
+.\objects\main.o: .\HARDWARE\Buzzer\buzzer.h
 .\objects\main.o: .\HARDWARE\LED\led.h
 .\objects\main.o: .\HARDWARE\OLED\oled.h
 .\objects\main.o: .\SYSTEM\show\show.h
+.\objects\main.o: .\HARDWARE\UART\uart.h
+.\objects\main.o: .\SYSTEM\playsong\playsong.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -14,10 +14,13 @@
 #include "sys.h"
 #include "delay.h"
 
+#include "button.h"
 #include "buzzer.h"
 #include "led.h"
 #include "oled.h"
 #include "show.h"
+#include "uart.h"
+#include "playsong.h"
 
 void systemInit(void);
 

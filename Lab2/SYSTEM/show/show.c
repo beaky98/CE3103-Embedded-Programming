@@ -28,14 +28,22 @@ void show_timer_task(void *pvParameters)
 
 void oled_show(void)
 {  
-     //To Do Exercise B
-	 /*char message[] = "HELLOWORLD\0";
-	const u8* show = (const u8*)&message; */
-	OLED_ShowString(10,10,"KEEKONG");
+     //To DO
+	 
 	 
 	 //call some function in oled to display something
-
-	 OLED_Refresh_Gram(); //refresh the OLED RAM
+	int count = 0;
+	while(1){
+		OLED_ShowString(0,0, "KK");
+		OLED_ShowNumber(0,28, count, 5, 15);
+		count++;
+		delay_ms(1000);
+		OLED_Refresh_Gram(); //refresh the OLED RAM
+		if(count == 60) count = 0;
+	}
+	
+   
+	 //OLED_Refresh_Gram(); //refresh the OLED RAM
 
 	  		
 	}

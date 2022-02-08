@@ -45,11 +45,14 @@
 .\objects\led.o: .\FreeRTOS\include\timers.h
 .\objects\led.o: .\FreeRTOS\include\semphr.h
 .\objects\led.o: .\SYSTEM\delay\delay.h
-.\objects\led.o: .\HARDWARE\Buzzer\buzzer.h
+.\objects\led.o: .\HARDWARE\BUTTON\button.h
 .\objects\led.o: .\SYSTEM\SYSTEM\system.h
+.\objects\led.o: .\HARDWARE\Buzzer\buzzer.h
 .\objects\led.o: .\HARDWARE\LED\led.h
 .\objects\led.o: .\HARDWARE\OLED\oled.h
 .\objects\led.o: .\SYSTEM\show\show.h
+.\objects\led.o: .\HARDWARE\UART\uart.h
+.\objects\led.o: .\SYSTEM\playsong\playsong.h
 .\objects\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

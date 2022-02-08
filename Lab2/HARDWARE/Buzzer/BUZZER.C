@@ -12,7 +12,7 @@ void BUZZER_Init(void)
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;	//Push pull output
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;	//50M
 	GPIO_Init(BUZZER_PORT, &GPIO_InitStructure);			//Initialize Buzzer GPIO
-	GPIO_SetBits(BUZZER_PORT,BUZZER_PIN);
+	GPIO_ResetBits(BUZZER_PORT,BUZZER_PIN);
 }
 
 void buzzer_task(void *pvParameters)
