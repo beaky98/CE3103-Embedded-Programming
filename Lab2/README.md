@@ -1,13 +1,11 @@
-# Lab 1
+# Lab 2
 
 ## Exercise A
-copy led.c to make
-Buzzer.c 
-buzzer.h 
-at system.c and .h to include buzzer_init and buzzer.h
+Need to create playsong.c and .h
+Copy Appendix stuff
 
 ## Exercise B
-Work on show.c and show.h
+In led.c created a timer
 
 ## Exercise C
-Work on show.c and show.h 
+Create uart.c and .h
