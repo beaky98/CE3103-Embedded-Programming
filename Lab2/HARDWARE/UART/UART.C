@@ -1,5 +1,6 @@
 #include "uart.h"
 #include "show.h"
+#include "led.h"
 
 // Practice C
 TimerHandle_t uartTimer;
@@ -94,10 +95,12 @@ int USART3_IRQHandler(void)
 		Usart_Receive = USART_ReceiveData(USART3);
 		
 		if (Usart_Receive == '2'){
-			changePeriod(5000);
+			changeUARTPeriod(5000);
+			changeLEDPeriod(5000);
 		}
 		else {
-			changePeriod(1000);
+			changeUARTPeriod(1000);
+			changeLEDPeriod(5000);
 		}
 		
 		OLED_ShowChar(0, 0, Usart_Receive,15,16);
@@ -107,7 +110,7 @@ int USART3_IRQHandler(void)
 	return 0;
 }
 
-void changePeriod(int newPeriod)
+void changeUARTPeriod(int newPeriod)
 {
 	xTimerChangePeriod(uartTimer, pdMS_TO_TICKS(newPeriod), pdMS_TO_TICKS(0));
 }

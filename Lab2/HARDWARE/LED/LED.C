@@ -32,3 +32,8 @@ void led_task(void *pvParameters)
      // vTaskDelay(Led_Count); //Delay 
     
 }  
+
+void changeLEDPeriod(int newPeriod)
+{
+	xTimerChangePeriod(ledTimer, pdMS_TO_TICKS(newPeriod), pdMS_TO_TICKS(0));
+}

@@ -16,5 +16,6 @@
 
 void LED_Init(void);  
 void led_task(void *pvParameters);
+void changeLEDPeriod(int newPeriod);
 extern int Led_Count;
 #endif
