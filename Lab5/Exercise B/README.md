@@ -7,5 +7,5 @@ dmesg | tail OR tail -f /var/log/kern.log
 ### To get information about module:
 modinfo hello_lkm.ko
 
-###To remove the module:
+### To remove the module:
 sudo rmmod hello_lkm
