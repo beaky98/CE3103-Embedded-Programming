@@ -1,8 +1,5 @@
-bin-folder = bin
-src-folder = src
-
-executable = $(bin-folder)/gpio
-source = $(src-folder)/gpio.c
+executable = gpio
+source = gpio.c
 
 CC = gcc
 LDFLAGS = -lpthread
@@ -13,4 +10,4 @@ $(executable): $(source)
 	$(CC) -o $(executable) $(source) $(LDFLAGS)
 
 clean:
-	rm -f $(bin-folder)/*
+	rm -rf gpio
